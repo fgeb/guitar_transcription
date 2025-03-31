@@ -31,8 +31,8 @@ class InferenceModel:
             raise ValueError(f"Unknown model type: {model_type}")
 
         gin_files = [
-            "mt3/gin/model.gin",
-            f"mt3/gin/{model_type}.gin"
+            "/home/fredi/mt3/mt3/gin/model.gin",
+            f"/home/fredi/mt3/mt3/gin/{model_type}.gin"
         ]
 
         self.batch_size = 8
@@ -191,11 +191,11 @@ class InferenceModel:
         return tokens
 
 # Load the model
-CHECKPOINT_PATH = "checkpoints/mt3"  # Update this path
+CHECKPOINT_PATH = "/home/fredi/ismir2022_base"  # Update this path
 inference_model = InferenceModel(CHECKPOINT_PATH, "mt3")
 
 # Load and transcribe an audio file
-AUDIO_PATH = "your_audio_file.wav"  # Update with your audio file path
+AUDIO_PATH = "/home/fredi/guitar_transcription/test.mp3"  # Update with your audio file path
 audio, _ = librosa.load(AUDIO_PATH, sr=SAMPLE_RATE)
 transcription = inference_model.transcribe_audio(audio)
 
