@@ -196,8 +196,8 @@ class InferenceModel:
         return tokens
 
 # Load the model
-CHECKPOINT_PATH = "/home/fredi/ismir2022_base"  # Update this path
-inference_model = InferenceModel(CHECKPOINT_PATH, "mt3")
+CHECKPOINT_PATH = "/home/fredi/ismir2021"  # Update this path
+inference_model = InferenceModel(CHECKPOINT_PATH, "ismir2021")
 
 # Load and transcribe an audio file
 AUDIO_PATH = "/home/fredi/guitar_transcription/test.mp3"  # Update with your audio file path
