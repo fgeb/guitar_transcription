@@ -7,6 +7,7 @@ import note_seq
 import seqio
 import t5x
 import jax
+import gin
 
 from mt3 import metrics_utils, models, network, note_sequences, preprocessors, spectrograms, vocabularies
 
