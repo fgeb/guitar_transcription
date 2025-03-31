@@ -165,7 +165,7 @@ class InferenceModel:
     def preprocess(self, ds):
         pp_chain = [
             functools.partial(
-                t5.data.preprocessors.split_tokens_to_inputs_length,
+                t5x.data.preprocessors.split_tokens_to_inputs_length,
                 sequence_length=self.sequence_length,
                 output_features=self.output_features,
                 feature_key="inputs",
