@@ -55,6 +55,11 @@ class InferenceModel:
         self.model = self._load_model()
 
         # Restore from checkpoint
+        # self.restore_from_checkpoint(checkpoint_path)
+        self.input_shapes = {
+            'encoder_input_tokens': (self.batch_size, self.inputs_length),
+            'decoder_input_tokens': (self.batch_size, self.outputs_length)
+        }
         self.restore_from_checkpoint(checkpoint_path)
 
     def _parse_gin(self, gin_files):
